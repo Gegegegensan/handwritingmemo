@@ -1,0 +1,36 @@
+.index {
+    display: grid;
+    grid-template-columns: none;
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+.brand-logo {
+    margin: 5px 5px 5px 5px;
+}
+
+.card {
+    overflow: auto;
+}
+h2 {
+    font-size: 2em;
+    margin: 20px auto;
+}
+
+.canvas {
+
+}
+.text {
+    text-align: center;
+}
+.btn {
+    margin: 5px;
+}
