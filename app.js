@@ -1,23 +1,5 @@
-//モーダルのエレメント指定
-let elem = document.querySelector('.modal');
-
-//モーダルのオプション指定
-let options = {
-  "opacity": 0.5, //表示時の背景
-  "inDuration": 500, //モーダルの表示速度(ミリ秒)
-  "outDuration": 500, //モーダルの閉じる速度(ミリ秒)
-  "onCloseStart": function () { //モーダルを閉じたときに実行する
-    console.log("close");
-  },
-  "startingTop": "100%",//モーダルの登場位置
-  "endingTop": "3%",//モーダルの停止位置
-}
-
-//モーダルのインスタンス作成
-let instance = M.Modal.init(elem, options);
-
-$( '#canvas' ).get( 0 ).width = $( window ).width();
-$( '#canvas' ).get( 0 ).height = $( window ).height();
+$('#canvas').get(0).width = $(window).width();
+$('#canvas').get(0).height = $(window).height();
 
 const color = '#1665c0'
 const canvas = document.getElementById('canvas')
@@ -27,15 +9,6 @@ let _ctx = null
 let offsetX = null
 let offsetY = null
 let data = ''
-
-/** Canvas のコンテキスト。!nullを保証 */
-// const ctx = () => {
-//   if (_ctx) {
-//     return _ctx
-//   } else {
-//     throw Error('コンテキストが null です。')
-//   }
-// }
 
 const reset = () => {
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
@@ -92,7 +65,6 @@ const reset = () => {
 
       }
 
-      // $emit('input', ctx.canvas.toDataURL('image/png'))
     }
 
     /** デスクトップブラウザでのマウス動作 */
